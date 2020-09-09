@@ -10,6 +10,7 @@ public class MemoryPuller : MonoBehaviour
     float distance;
     Vector2 direction;
 
+    bool trapped = false;
     private void Update()
     {
         if (pulling)
@@ -23,6 +24,12 @@ public class MemoryPuller : MonoBehaviour
             else
             {
                 player.outsideForce = Vector2.zero;
+
+                if (!trapped)
+                {
+                    trapped = true;
+                    Debug.Log("Trapped/ changing scene");
+                }
             }
         }
     }
