@@ -1,0 +1,488 @@
+fileFormatVersion: 2
+guid: bb97118c3cdcf5945b4ab1e676928f1c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7474855965654802624
+    second: memorywalkspritesheet_0
+  - first:
+      213: 679796973967128278
+    second: memorywalkspritesheet_1
+  - first:
+      213: -870667114550069539
+    second: memorywalkspritesheet_2
+  - first:
+      213: -4139047932508752448
+    second: memorywalkspritesheet_3
+  - first:
+      213: 8425618542304654931
+    second: memorywalkspritesheet_4
+  - first:
+      213: -7022569260034892579
+    second: memorywalkspritesheet_5
+  - first:
+      213: -8150429886506715244
+    second: memorywalkspritesheet_6
+  - first:
+      213: 1379020322389885023
+    second: memorywalkspritesheet_7
+  - first:
+      213: 3025928314381056315
+    second: memorywalkspritesheet_8
+  - first:
+      213: -8835637173541892479
+    second: memorywalkspritesheet_9
+  - first:
+      213: 1620323684645755389
+    second: memorywalkspritesheet_10
+  - first:
+      213: 6714838028153702044
+    second: memorywalkspritesheet_11
+  - first:
+      213: -4583981501272563515
+    second: memorywalkspritesheet_12
+  - first:
+      213: -8867593734953497586
+    second: memorywalkspritesheet_13
+  - first:
+      213: 6485031747140248007
+    second: memorywalkspritesheet_14
+  - first:
+      213: 8544301692939085113
+    second: memorywalkspritesheet_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: memorywalkspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1440
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f9feb4a1af34890800000000000000
+      internalID: -7474855965654802624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1440
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d632b00fbf1f6900800000000000000
+      internalID: 679796973967128278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 1440
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6f0af4fd4cae3f0800000000000000
+      internalID: -870667114550069539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1440
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c53082c5d52f86c0800000000000000
+      internalID: -4139047932508752448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1440
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35673036c6fcde470800000000000000
+      internalID: 8425618542304654931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 960
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddcda051772da8e90800000000000000
+      internalID: -7022569260034892579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 960
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4973a08733bd3ee80800000000000000
+      internalID: -8150429886506715244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 960
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5008164da3432310800000000000000
+      internalID: 1379020322389885023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 960
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39ba7615c14ef920800000000000000
+      internalID: 3025928314381056315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 960
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e8ccacdc2816580800000000000000
+      internalID: -8835637173541892479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9567c6ecb8c7610800000000000000
+      internalID: 1620323684645755389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 480
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c96c2602c95ef2d50800000000000000
+      internalID: 6714838028153702044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 480
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c0efaf8c1d6260c0800000000000000
+      internalID: -4583981501272563515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 480
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c0e970b7affe480800000000000000
+      internalID: -8867593734953497586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 480
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1ec6dc3067ff950800000000000000
+      internalID: 6485031747140248007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: memorywalkspritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 204
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 935276dbe15739670800000000000000
+      internalID: 8544301692939085113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
