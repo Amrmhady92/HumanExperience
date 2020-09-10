@@ -6,7 +6,7 @@ public class GameHandler : MonoBehaviour
 {
     private static GameHandler instance;
 
-
+    public MemoryPuller testPuller;
     public GameObject playerCharacter;
     public GameObject memoryCamera;
 
@@ -54,5 +54,13 @@ public class GameHandler : MonoBehaviour
     private void Start()
     {
         if (Instance == null) instance = this;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            testPuller.Active = true;
+        }
     }
 }
