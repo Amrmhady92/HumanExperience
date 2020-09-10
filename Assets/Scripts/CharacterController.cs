@@ -10,7 +10,7 @@ public class CharacterController : MonoBehaviour
     public bool xOnly = false;
     public Vector2 outsideForce = Vector2.zero;
     private Rigidbody2D rb;
-    bool active = true;
+    [HideInInspector] public bool active = true;
     [HideInInspector] public float xDir, yDir = 0;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,7 @@ public class CharacterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
 
 
         if (!active) return;

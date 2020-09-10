@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MemoryPuller : MonoBehaviour
 {
+
+    public int memorySceneId = 0;
     public float forcePower = 2;
     CharacterController player;
     bool pulling = false;
@@ -29,6 +31,10 @@ public class MemoryPuller : MonoBehaviour
                 {
                     trapped = true;
                     Debug.Log("Trapped/ changing scene");
+                    Debug.Log("Fading out");
+                    player.active = false;
+                    player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    MemoryScene.ActivateMemoryScene(memorySceneId);
                 }
             }
         }
