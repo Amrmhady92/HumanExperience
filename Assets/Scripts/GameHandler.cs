@@ -10,8 +10,9 @@ public class GameHandler : MonoBehaviour
     public GameObject playerCharacter;
     public GameObject memoryCamera;
 
+    public SpriteRenderer darkFader;
 
-
+    float alpha = 0;
 
     public static GameHandler Instance
     {
@@ -29,6 +30,23 @@ public class GameHandler : MonoBehaviour
 
     public void FadeIn()
     {
+
+    }
+
+    IEnumerator Fade(bool fadeIn)
+    {
+        if (fadeIn)
+        {
+            alpha += 0.1f;
+        }
+        else //fade out
+        {
+            alpha -= 0.1f;
+        }
+
+        darkFader.color = new Color(0, 0, 0, alpha);
+        
+        yield return new WaitForEndOfFrame();
 
     }
     private void Start()
