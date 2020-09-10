@@ -49,6 +49,8 @@ public class GameHandler : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
     }
+    
+    
     private void Start()
     {
         if (Instance == null) instance = this;
