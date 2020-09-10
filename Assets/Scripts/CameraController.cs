@@ -15,13 +15,15 @@ public class CameraController : MonoBehaviour
 
     private float m_time     =  .0f;
     private float m_duration = 2.5f;
+    private float m_growDuration = 3.5f;
+    private float m_disappearDuration = .5f;
 
     private bool m_isSmall = true;
 
     private void Update()
     {
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && m_time == 0)
         {
             if (m_isSmall)
                StartMemory();
@@ -48,6 +50,7 @@ public class CameraController : MonoBehaviour
 
     private void StartMemory()
     {
+        m_duration  = m_growDuration;
         m_isSmall   = false;
         m_start     = m_small;
         m_end       = m_big;
@@ -55,6 +58,7 @@ public class CameraController : MonoBehaviour
 
     private void EndMemory()
     {
+        m_duration  = m_disappearDuration;
         m_isSmall   = true;
         m_start     = m_big;
         m_end       = m_small;
