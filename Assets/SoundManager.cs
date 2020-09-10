@@ -50,7 +50,7 @@ public class SoundManager : MonoBehaviour
             yield return null;
         }
 
-        audioSource.Play();
+    
     }
     void ChangeClip ()
     {
@@ -60,6 +60,7 @@ public class SoundManager : MonoBehaviour
             audioSource.clip = audioClips[audioIndex];
 
         }
+        audioSource.Play();
         StartCoroutine(FadeIn(audioSource, fadeDuration));
     }
 }

@@ -498,7 +498,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9520f7b370270414f8d820afc5db36ad, type: 3}
   - {fileID: 8300000, guid: 892fd0c51a1b24ca18afe9965447fd31, type: 3}
   - {fileID: 8300000, guid: c1a857fde1c4548e7ab9f3be4148c719, type: 3}
-  - {fileID: 8300000, guid: 68be9bb98bf86471dadfd6c869cb5768, type: 3}
+  - {fileID: 8300000, guid: 42c5764f243194810af1dbbfa2f052de, type: 3}
   - {fileID: 8300000, guid: 54175dec41fd144249dfd2fb08f68118, type: 3}
   audioSource: {fileID: 716979876}
   fadeDuration: 1
