@@ -12,6 +12,9 @@ public class CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     [HideInInspector] public bool active = true;
     [HideInInspector] public float xDir, yDir = 0;
+
+    private Collider2D m_collider;
+    public GameObject m_activationHandler;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,12 +48,36 @@ public class CharacterController : MonoBehaviour
         {
             xDir = -1;
         }
+        if (Input.GetKeyDown(KeyCode.E) && m_collider != null)
+        {
+            m_activationHandler.SendMessage("Activate", m_collider.gameObject);
+        }
 
         rb.velocity = new Vector2(xDir * speed, yDir * speed) + outsideForce;
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Activatable")
+        {
+            Debug.Log("Sup");
+            m_collider = collider;
+        }
+    }
 
+    //private void OnCollisioEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Activatable")
+    //    {
+    //        Debug.Log("Sup");
+    //        m_collision = collision;
+    //    }
+    //}
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        m_collider = null;
+    }
 
 }
