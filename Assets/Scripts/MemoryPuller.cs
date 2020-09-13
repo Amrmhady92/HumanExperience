@@ -11,10 +11,39 @@ public class MemoryPuller : MonoBehaviour
     bool pulling = false;
     float distance;
     Vector2 direction;
+    [SerializeField] bool active = false;
+
 
     bool trapped = false;
+
+    public bool Active
+    {
+        get
+        {
+            return active;
+        }
+
+        set
+        {
+
+            if (value)
+            {
+                Canvas canv = this.gameObject.GetComponent<Canvas>();
+                LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.one * 5, 2f).setOnComplete(()=> 
+                {
+                    active = value;
+                });
+            }
+            else
+            {
+                active = value;
+            }
+        }
+    }
+
     private void Update()
     {
+        if (!Active) return;
         if (pulling)
         {
             distance = Vector2.Distance(this.transform.position, player.transform.position) + 0.05f;
@@ -30,11 +59,10 @@ public class MemoryPuller : MonoBehaviour
                 if (!trapped)
                 {
                     trapped = true;
-                    Debug.Log("Trapped/ changing scene");
-                    Debug.Log("Fading out");
                     player.active = false;
                     player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-                    MemoryScene.ActivateMemoryScene(memorySceneId);
+                    MemoryScene.ActivateMemoryScenePortal(memorySceneId);
+                    Active = false;
                 }
             }
         }
@@ -45,8 +73,6 @@ public class MemoryPuller : MonoBehaviour
     {
         if (collision.GetComponent<CharacterController>() != null)
         {
-            Debug.Log("Enter");
-
             if (player == null) player = collision.GetComponent<CharacterController>();
             if (player == null)
             {
@@ -61,7 +87,6 @@ public class MemoryPuller : MonoBehaviour
     {
         if (collision.GetComponent<CharacterController>() != null)
         {
-            Debug.Log("Exit");
             if (player == null) player = collision.GetComponent<CharacterController>();
             if (player == null)
             {
