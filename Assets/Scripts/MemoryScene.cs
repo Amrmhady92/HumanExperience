@@ -9,6 +9,7 @@ public class MemoryScene : MonoBehaviour
     public GameObject sceneEntryPortal;
     public List<GameObject> sceneObjects;
 
+    public GameObject sceneActivationHandler;
 
     static List<MemoryScene> memoryScenes;
 
@@ -64,18 +65,24 @@ public class MemoryScene : MonoBehaviour
             return;
         }
 
-        if(nextScene != null && activeScene != null)
+        if(nextScene != null/* && activeScene != null*/)
         {
             Debug.Log("Openning Scene\nNextScene "+nextScene.name+"\nActiveScene "+activeScene);
             Canvas nextSceneCanvas = nextScene.sceneEntryPortal.GetComponent<Canvas>();
             if(nextSceneCanvas != null)
             {
+                GameHandler.Instance.InitPlayer(); // Temporary 
+
                 //Make Portal huge
                 LeanTween.size(nextSceneCanvas.GetComponent<RectTransform>(), Vector2.one * 60, 5f).setOnComplete(() => 
                 {
                     nextSceneCanvas.gameObject.SetActive(false);
                     GameHandler.Instance.playerCharacter.GetComponent<CharacterController>().active = true;
-                    activeScene.gameObject.SetActive(false);
+                    GameHandler.Instance.playerCharacter.GetComponent<CharacterController>().m_activationHandler = nextScene.sceneActivationHandler;
+                    GameHandler.Instance.soundManager.PlayNext();
+
+
+                    if (activeScene != null) activeScene.gameObject.SetActive(false);
 
                     //Activate the things in next scene
                     if (nextScene.sceneObjects != null)
@@ -91,7 +98,7 @@ public class MemoryScene : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Active Scene " + activeScene + " \nNext Scene " + nextScene);
+            Debug.LogError("Active Scene :" + activeScene + " .. \nNext Scene " + nextScene);
         }
 
     }

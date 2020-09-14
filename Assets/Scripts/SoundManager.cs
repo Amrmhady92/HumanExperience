@@ -22,17 +22,23 @@ public class SoundManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    //void Update()
+    //{
+    //    if(Input.GetKeyDown(KeyCode.E))
+    //    {
+    //        endCall(endFade);
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.F))
+    //    {
+    //        PlayNext();
+    //    }
+    //}
+
+    public void PlayNext()
     {
-        if(Input.GetKeyDown(KeyCode.E))
-        {
-            endCall(endFade);
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            StartCoroutine(FadeOut(audioSource, fadeDuration));
-        }
+        StartCoroutine(FadeOut(audioSource, fadeDuration));
     }
+
     public IEnumerator FadeOut(AudioSource audioSource, float FadeTime)
     {
         Debug.Log("fading");

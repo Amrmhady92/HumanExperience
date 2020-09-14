@@ -10,7 +10,7 @@ public class CharacterController : MonoBehaviour
     public bool xOnly = false;
     public Vector2 outsideForce = Vector2.zero;
     private Rigidbody2D rb;
-    [HideInInspector] public bool active = true;
+    public bool active = true;
     [HideInInspector] public float xDir, yDir = 0;
 
     private Collider2D m_collider;

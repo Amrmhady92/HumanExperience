@@ -8,11 +8,13 @@ public class GameHandler : MonoBehaviour
 
     public MemoryPuller testPuller;
     public GameObject playerCharacter;
-    public GameObject memoryCamera;
+    public SoundManager soundManager;
 
-    public SpriteRenderer darkFader;
 
-    float alpha = 0;
+    public GameObject charImage;
+
+
+    private bool initialized = false;
 
     public static GameHandler Instance
     {
@@ -23,37 +25,12 @@ public class GameHandler : MonoBehaviour
     }
 
 
-    public void FadeOut()
-    {
 
-    }
 
-    public void FadeIn()
-    {
-
-    }
-
-    IEnumerator Fade(bool fadeIn)
-    {
-        if (fadeIn)
-        {
-            alpha += 0.1f;
-        }
-        else //fade out
-        {
-            alpha -= 0.1f;
-        }
-
-        darkFader.color = new Color(0, 0, 0, alpha);
-        
-        yield return new WaitForEndOfFrame();
-
-    }
-    
-    
     private void Start()
     {
         if (Instance == null) instance = this;
+        if (soundManager == null) soundManager = GameObject.FindObjectOfType<SoundManager>();
     }
 
     private void Update()
@@ -63,4 +40,14 @@ public class GameHandler : MonoBehaviour
             testPuller.Active = !testPuller.Active;
         }
     }
+
+    public void InitPlayer()
+    {
+        if (!initialized)
+        {
+            initialized = true;
+            charImage.SetActive(true);
+        }
+    }
+
 }

@@ -48,9 +48,9 @@ public class MemoryPuller : MonoBehaviour
             {
                 open = false;
                 active = value;
-                Canvas canv = this.gameObject.GetComponent<Canvas>();
-                LeanTween.cancelAll();
-                LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.zero, 0.5f);
+                //Canvas canv = this.gameObject.GetComponent<Canvas>();
+                //LeanTween.cancelAll();
+                //LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.zero, 0.5f);
             }
         }
     }

@@ -10,8 +10,8 @@ public class CameraController : MonoBehaviour
     private UnityEngine.Vector3 m_big   = new UnityEngine.Vector3(  1.3f,   .0f,    1f);
     private UnityEngine.Vector3 m_small = new UnityEngine.Vector3(  .0f,    .0f,    .0f);
 
-    private UnityEngine.Vector3 m_start = new UnityEngine.Vector3(.0f, .0f, .0f); 
-    private UnityEngine.Vector3 m_end   = new UnityEngine.Vector3(.0f, .0f, .0f);
+    private UnityEngine.Vector3 m_start = new UnityEngine.Vector3(1.3f, .0f, 1f); //new UnityEngine.Vector3(.0f, .0f, .0f); 
+    private UnityEngine.Vector3 m_end = new UnityEngine.Vector3(1.3f, .0f, 1f); //new UnityEngine.Vector3(.0f, .0f, .0f);
 
     private float m_time     =  .0f;
     private float m_duration = 2.5f;
