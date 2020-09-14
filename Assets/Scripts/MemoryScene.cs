@@ -55,7 +55,7 @@ public class MemoryScene : MonoBehaviour
 
                     }
                     else if (MemoryScenes[i].active) activeScene = MemoryScenes[i];
-                    else MemoryScenes[i].gameObject.SetActive(false);
+                    //else MemoryScenes[i].gameObject.SetActive(false);
                 }
             }
         }
@@ -92,6 +92,10 @@ public class MemoryScene : MonoBehaviour
                             nextScene.sceneObjects[i].SetActive(true);
                         }
                     }
+
+                    nextScene.active = true;
+                    activeScene.active = false;
+
 
                 });
             }

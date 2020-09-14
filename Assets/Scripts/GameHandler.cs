@@ -37,8 +37,13 @@ public class GameHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            testPuller.Active = !testPuller.Active;
+            ActivateMemories();
         }
+    }
+
+    private void ActivateMemories()
+    {
+        testPuller.OpenPortal();
     }
 
     public void InitPlayer()

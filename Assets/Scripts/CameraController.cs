@@ -62,6 +62,7 @@ public class CameraController : MonoBehaviour
         m_isSmall   = true;
         m_start     = m_big;
         m_end       = m_small;
+        GameHandler.Instance.soundManager.endCall();
     }
 
 

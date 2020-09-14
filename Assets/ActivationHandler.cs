@@ -82,14 +82,14 @@ public class ActivationHandler : MonoBehaviour
             {
                 Debug.Log("The portal is Opening");
                 //m_portalCombinations[j].m_portal.SetActive(false);
-                m_portalCombinations[j].m_portal.Active = false;
+                m_portalCombinations[j].m_portal.OpenMiniPortal();
             }
             else if (m_IsActive[m_Activatables.IndexOf(m_portalCombinations[j].m_key1)] && m_IsActive[m_Activatables.IndexOf(m_portalCombinations[j].m_key2)])
                 //m_portalCombinations[j].m_portal.SetActive(true);
-                m_portalCombinations[j].m_portal.Active = true;
+                m_portalCombinations[j].m_portal.OpenPortal();
             else
                 // m_portalCombinations[j].m_portal.SetActive(false);
-                m_portalCombinations[j].m_portal.Active = false;
+                m_portalCombinations[j].m_portal.ClosePortal();
             j++;
         }
     }

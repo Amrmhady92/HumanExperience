@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,33 +26,7 @@ public class MemoryPuller : MonoBehaviour
 
         set
         {
-
-            if (value)
-            {
-                if (!open)
-                {
-                    open = true;
-                    Canvas canv = this.gameObject.GetComponent<Canvas>();
-                    LeanTween.cancelAll();
-                    LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.one * 5, 2f).setOnComplete(() =>
-                    {
-                        active = value;
-                    });
-                }
-                else
-                {
-                    active = value;
-                }
-
-            }
-            else
-            {
-                open = false;
-                active = value;
-                //Canvas canv = this.gameObject.GetComponent<Canvas>();
-                //LeanTween.cancelAll();
-                //LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.zero, 0.5f);
-            }
+            active = value;
         }
     }
 
@@ -82,6 +57,37 @@ public class MemoryPuller : MonoBehaviour
         }
     }
 
+    public void OpenPortal(float time = 2f, Action callback = null)
+    {
+        Canvas canv = this.gameObject.GetComponent<Canvas>();
+        LeanTween.cancelAll();
+        LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.one * 5, time).setOnComplete(() =>
+        {
+            callback?.Invoke();
+            Active = true;
+        });
+    }
+
+    public void OpenMiniPortal(float time = 2f, Action callback = null)
+    {
+        Canvas canv = this.gameObject.GetComponent<Canvas>();
+        LeanTween.cancelAll();
+        LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.one * 1, time).setOnComplete(() =>
+        {
+            callback?.Invoke();
+        });
+    }
+
+    public void ClosePortal(float time = 0.5f, Action callback = null)
+    {
+        Active = false;
+        Canvas canv = this.gameObject.GetComponent<Canvas>();
+        LeanTween.cancelAll();
+        LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.zero, time).setOnComplete(() =>
+        {
+            callback?.Invoke();
+        });
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
