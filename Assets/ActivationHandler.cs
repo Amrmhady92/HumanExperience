@@ -5,7 +5,7 @@ using UnityEngine;
 
 [System.Serializable]public struct PortalCombination
 {
-    public GameObject m_portal;
+    public MemoryPuller m_portal;
     public GameObject m_key1;
     public GameObject m_key2;
 }
@@ -81,12 +81,15 @@ public class ActivationHandler : MonoBehaviour
                  m_activeKeys.Count != 2)
             {
                 Debug.Log("The portal is Opening");
-                m_portalCombinations[j].m_portal.SetActive(false);
+                //m_portalCombinations[j].m_portal.SetActive(false);
+                m_portalCombinations[j].m_portal.Active = false;
             }
             else if (m_IsActive[m_Activatables.IndexOf(m_portalCombinations[j].m_key1)] && m_IsActive[m_Activatables.IndexOf(m_portalCombinations[j].m_key2)])
-                m_portalCombinations[j].m_portal.SetActive(true);
+                //m_portalCombinations[j].m_portal.SetActive(true);
+                m_portalCombinations[j].m_portal.Active = true;
             else
-                m_portalCombinations[j].m_portal.SetActive(false);
+                // m_portalCombinations[j].m_portal.SetActive(false);
+                m_portalCombinations[j].m_portal.Active = false;
             j++;
         }
     }

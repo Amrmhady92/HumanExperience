@@ -70,11 +70,22 @@ public class MemoryScene : MonoBehaviour
             Canvas nextSceneCanvas = nextScene.sceneEntryPortal.GetComponent<Canvas>();
             if(nextSceneCanvas != null)
             {
-                LeanTween.size(nextSceneCanvas.GetComponent<RectTransform>(), Vector2.one * 100, 5f).setOnComplete(() => 
+                //Make Portal huge
+                LeanTween.size(nextSceneCanvas.GetComponent<RectTransform>(), Vector2.one * 60, 5f).setOnComplete(() => 
                 {
                     nextSceneCanvas.gameObject.SetActive(false);
                     GameHandler.Instance.playerCharacter.GetComponent<CharacterController>().active = true;
                     activeScene.gameObject.SetActive(false);
+
+                    //Activate the things in next scene
+                    if (nextScene.sceneObjects != null)
+                    {
+                        for (int i = 0; i < nextScene.sceneObjects.Count; i++)
+                        {
+                            nextScene.sceneObjects[i].SetActive(true);
+                        }
+                    }
+
                 });
             }
         }
@@ -92,13 +103,13 @@ public class MemoryScene : MonoBehaviour
     {
         if (!MemoryScenes.Contains(this)) MemoryScenes.Add(this);
         if (deactivateOnStart) this.gameObject.SetActive(false);
-        if(sceneObjects != null)
-        {
-            for (int i = 0; i < sceneObjects.Count; i++)
-            {
-                sceneObjects[i].SetActive(true);
-            }
-        }
+        //if(sceneObjects != null)
+        //{
+        //    for (int i = 0; i < sceneObjects.Count; i++)
+        //    {
+        //        sceneObjects[i].SetActive(true);
+        //    }
+        //}
         
     }
 

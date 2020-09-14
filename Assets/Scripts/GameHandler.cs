@@ -60,7 +60,7 @@ public class GameHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.M))
         {
-            testPuller.Active = true;
+            testPuller.Active = !testPuller.Active;
         }
     }
 }

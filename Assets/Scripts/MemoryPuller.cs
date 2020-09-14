@@ -13,7 +13,7 @@ public class MemoryPuller : MonoBehaviour
     Vector2 direction;
     [SerializeField] bool active = false;
 
-
+    bool open = false;
     bool trapped = false;
 
     public bool Active
@@ -28,15 +28,29 @@ public class MemoryPuller : MonoBehaviour
 
             if (value)
             {
-                Canvas canv = this.gameObject.GetComponent<Canvas>();
-                LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.one * 5, 2f).setOnComplete(()=> 
+                if (!open)
+                {
+                    open = true;
+                    Canvas canv = this.gameObject.GetComponent<Canvas>();
+                    LeanTween.cancelAll();
+                    LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.one * 5, 2f).setOnComplete(() =>
+                    {
+                        active = value;
+                    });
+                }
+                else
                 {
                     active = value;
-                });
+                }
+
             }
             else
             {
+                open = false;
                 active = value;
+                Canvas canv = this.gameObject.GetComponent<Canvas>();
+                LeanTween.cancelAll();
+                LeanTween.size(canv.GetComponent<RectTransform>(), Vector2.zero, 0.5f);
             }
         }
     }

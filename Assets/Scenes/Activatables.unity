@@ -158,7 +158,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 68be9bb98bf86471dadfd6c869cb5768, type: 3}
   - {fileID: 8300000, guid: 54175dec41fd144249dfd2fb08f68118, type: 3}
   audioSource: {fileID: 124265013}
+  endSource: {fileID: 0}
   fadeDuration: 1
+  endFade: 3
 --- !u!82 &124265013
 AudioSource:
   m_ObjectHideFlags: 0
@@ -745,7 +747,7 @@ MonoBehaviour:
   m_Activatables:
   - {fileID: 1582657355}
   - {fileID: 1153141265}
-  - {fileID: 0}
+  - {fileID: 1468459878}
   m_IsActive: 
   m_portalCombinations:
   - m_portal: {fileID: 2074594222}
@@ -1640,6 +1642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   memorySceneId: 0
   forcePower: 2
+  active: 0
 --- !u!50 &2074594224
 Rigidbody2D:
   serializedVersion: 4

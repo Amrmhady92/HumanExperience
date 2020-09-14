@@ -53,6 +53,12 @@ public class CharacterController : MonoBehaviour
             m_activationHandler.SendMessage("Activate", m_collider.gameObject);
         }
 
+        //if (m_collider != null)
+        //{
+        //    m_activationHandler.SendMessage("Activate", m_collider.gameObject);
+        //    m_collider = null;
+        //}
+
         rb.velocity = new Vector2(xDir * speed, yDir * speed) + outsideForce;
 
     }
