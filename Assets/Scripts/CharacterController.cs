@@ -15,6 +15,7 @@ public class CharacterController : MonoBehaviour
 
     private Collider2D m_collider;
     public GameObject m_activationHandler;
+    public GameObject m_cameraController;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,28 +49,33 @@ public class CharacterController : MonoBehaviour
         {
             xDir = -1;
         }
-        if (Input.GetKeyDown(KeyCode.E) && m_collider != null)
+        if (m_collider != null)
         {
             m_activationHandler.SendMessage("Activate", m_collider.gameObject);
+            m_collider = null;
         }
 
-        //if (m_collider != null)
-        //{
-        //    m_activationHandler.SendMessage("Activate", m_collider.gameObject);
-        //    m_collider = null;
-        //}
 
-        rb.velocity = new Vector2(xDir * speed, yDir * speed) + outsideForce;
+        if (Input.GetKey(KeyCode.N))
+        {
+            //EndMemory
+            m_cameraController.SendMessage("EndMemory");
+        }
+
+            //if (m_collider != null)
+            //{
+            //    m_activationHandler.SendMessage("Activate", m_collider.gameObject);
+            //    m_collider = null;
+            //}
+
+            rb.velocity = new Vector2(xDir * speed, yDir * speed) + outsideForce;
 
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "Activatable")
-        {
-            Debug.Log("Sup");
             m_collider = collider;
-        }
     }
 
     //private void OnCollisioEnter2D(Collision2D collision)
