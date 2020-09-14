@@ -76,11 +76,24 @@ public class SoundManager : MonoBehaviour
         audioSource.Play();
         StartCoroutine(FadeIn(audioSource, fadeDuration));
     }
+    public void sceneChange ()
+    {
+        StartCoroutine(FadeOut(audioSource, fadeDuration));
+
+    }
     public void endCall (float fadeIn)
     {
         end = true;
         endSource.Play();
         StartCoroutine(FadeIn(endSource, fadeIn));
+        StartCoroutine(FadeOut(audioSource, fadeDuration));
+
+    }
+    public void endCall()
+    {
+        end = true;
+        endSource.Play();
+        StartCoroutine(FadeIn(endSource, fadeDuration));
         StartCoroutine(FadeOut(audioSource, fadeDuration));
 
     }
