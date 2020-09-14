@@ -49,10 +49,9 @@ public class CharacterController : MonoBehaviour
         {
             xDir = -1;
         }
-        if (m_collider != null)
+        if (Input.GetKeyDown(KeyCode.E) && m_collider != null)
         {
             m_activationHandler.SendMessage("Activate", m_collider.gameObject);
-            m_collider = null;
         }
 
 
